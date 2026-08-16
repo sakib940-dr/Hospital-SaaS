@@ -5,12 +5,17 @@ import Button from "./Button.jsx";
 export function Modal({ open, onClose, title, children, footer, size = "md" }) {
   const titleId = useId();
   const panelRef = useRef(null);
+  const onCloseRef = useRef(onClose);
   const widths = { sm: "max-w-md", md: "max-w-xl", lg: "max-w-3xl" };
+
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   useEffect(() => {
     if (!open) return undefined;
     const previous = document.activeElement;
-    const onKeyDown = (event) => event.key === "Escape" && onClose?.();
+    const onKeyDown = (event) => event.key === "Escape" && onCloseRef.current?.();
     document.addEventListener("keydown", onKeyDown);
     document.body.style.overflow = "hidden";
     requestAnimationFrame(() => panelRef.current?.focus());
@@ -19,7 +24,7 @@ export function Modal({ open, onClose, title, children, footer, size = "md" }) {
       document.body.style.overflow = "";
       previous?.focus?.();
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open) return null;
   return (

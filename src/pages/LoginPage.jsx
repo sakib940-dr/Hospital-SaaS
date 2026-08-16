@@ -73,8 +73,8 @@ export default function LoginPage() {
           </div>
         ) : (
           <form onSubmit={submit} className="mt-6 space-y-4">
-            <Field label="ইমেইল" required><Input type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} /></Field>
-            <Field label="পাসওয়ার্ড" required><Input type="password" autoComplete="current-password" required minLength={6} value={password} onChange={(event) => setPassword(event.target.value)} /></Field>
+            <Field label="ইমেইল" required><Input type="email" autoComplete="email" required placeholder="admin@hospital.com" value={email} onChange={(event) => setEmail(event.target.value)} /></Field>
+            <Field label="পাসওয়ার্ড" required><Input type="password" autoComplete="current-password" required minLength={6} placeholder="আপনার পাসওয়ার্ড" value={password} onChange={(event) => setPassword(event.target.value)} /></Field>
             <Button type="submit" className="w-full" loading={loading}>লগইন করুন</Button>
           </form>
         )}

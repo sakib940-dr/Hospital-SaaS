@@ -41,6 +41,9 @@
 - Self-serve signup: debounced subdomain check, Supabase Auth, tenant RPC, email-confirmation fallback
 - Temporary Vercel tenant preview: root deployment URL-তে `/{hospital-subdomain}` path visitor site দেখায়; own domain যোগ হলে normal wildcard subdomain ব্যবহার করুন
 - Marketing pricing/social-proof sections, trial countdown, polished empty states
+- Premium hospital dashboard with today/upcoming/all appointment summaries and 7-day request analytics
+- Admin-managed `slider_images` CRUD and accessible visitor auto-rotating banner
+- Shared Modal focus handling prevents mobile keyboard/focus loss while typing; form metadata supplies safe placeholders/helpers rather than saved demo data
 - Multi-tenant RLS and storage policies
 
 ## Manual external-state work still required

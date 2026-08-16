@@ -18,6 +18,7 @@ const DoctorsPanel = lazy(() => import("./pages/hospital-admin/DoctorsPanel.jsx"
 const ServicesPanel = lazy(() => import("./pages/hospital-admin/ServicesPanel.jsx"));
 const CostsPanel = lazy(() => import("./pages/hospital-admin/CostsPanel.jsx"));
 const GalleryPanel = lazy(() => import("./pages/hospital-admin/GalleryPanel.jsx"));
+const SliderPanel = lazy(() => import("./pages/hospital-admin/SliderPanel.jsx"));
 const ReviewsPanel = lazy(() => import("./pages/hospital-admin/ReviewsPanel.jsx"));
 const AppointmentsPanel = lazy(() => import("./pages/hospital-admin/AppointmentsPanel.jsx"));
 const HospitalAnalyticsPage = lazy(() => import("./pages/hospital-admin/HospitalAnalyticsPage.jsx"));
@@ -56,6 +57,7 @@ export default function App() {
                 <Route path="services" element={<ServicesPanel />} />
                 <Route path="costs" element={<CostsPanel />} />
                 <Route path="gallery" element={<GalleryPanel />} />
+                <Route path="slider" element={<SliderPanel />} />
                 <Route path="reviews" element={<ReviewsPanel />} />
                 <Route path="appointments" element={<AppointmentsPanel />} />
                 <Route path="analytics" element={<HospitalAnalyticsPage />} />

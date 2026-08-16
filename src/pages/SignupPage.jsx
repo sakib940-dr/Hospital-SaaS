@@ -152,17 +152,17 @@ export default function SignupPage() {
         <h1 className="mt-5 text-3xl">নতুন হাসপাতাল account</h1>
         <p className="mt-2 text-primary-500">১৪ দিনের ট্রায়াল শুরু করুন—কোনো payment তথ্য লাগবে না।</p>
         <form onSubmit={submit} className="mt-6 space-y-4">
-          <Field label="হাসপাতালের নাম" required><Input autoComplete="organization" required maxLength={120} value={form.name} onChange={(event) => update("name", event.target.value)} /></Field>
+          <Field label="হাসপাতালের নাম" required><Input autoComplete="organization" required maxLength={120} placeholder="উদাহরণ: সিরাজগঞ্জ জেনারেল হাসপাতাল" value={form.name} onChange={(event) => update("name", event.target.value)} /></Field>
           <Field label="Subdomain" required hint={availabilityMessage || "যেমন: sirajganj-eye — পরে আপনার ওয়েবসাইটের ঠিকানায় ব্যবহার হবে।"}>
             <div className="flex rounded-lg border border-primary-200 bg-white focus-within:border-primary-400">
-              <Input aria-label="Subdomain" required maxLength={63} value={form.subdomain} onChange={(event) => update("subdomain", sanitizeSubdomain(event.target.value))} className="border-0 shadow-none" />
+              <Input aria-label="Subdomain" required maxLength={63} placeholder="উদাহরণ: sirajganj-general" value={form.subdomain} onChange={(event) => update("subdomain", sanitizeSubdomain(event.target.value))} className="border-0 shadow-none" />
               <span className="flex items-center border-l border-primary-100 px-3 text-sm text-primary-400">.{rootDomain}</span>
             </div>
           </Field>
-          <Field label="ইমেইল" required><Input type="email" autoComplete="email" required value={form.email} onChange={(event) => update("email", event.target.value)} /></Field>
+          <Field label="ইমেইল" required><Input type="email" autoComplete="email" required placeholder="উদাহরণ: admin@hospital.com" value={form.email} onChange={(event) => update("email", event.target.value)} /></Field>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="পাসওয়ার্ড" required hint="অন্তত ৮ অক্ষর"><Input type="password" autoComplete="new-password" required minLength={8} value={form.password} onChange={(event) => update("password", event.target.value)} /></Field>
-            <Field label="পাসওয়ার্ড নিশ্চিত করুন" required><Input type="password" autoComplete="new-password" required minLength={8} value={form.confirmPassword} onChange={(event) => update("confirmPassword", event.target.value)} /></Field>
+            <Field label="পাসওয়ার্ড" required hint="অন্তত ৮ অক্ষর; letter, number ও symbol মিলিয়ে দিন।"><Input type="password" autoComplete="new-password" required minLength={8} placeholder="শক্তিশালী পাসওয়ার্ড দিন" value={form.password} onChange={(event) => update("password", event.target.value)} /></Field>
+            <Field label="পাসওয়ার্ড নিশ্চিত করুন" required><Input type="password" autoComplete="new-password" required minLength={8} placeholder="একই পাসওয়ার্ড আবার লিখুন" value={form.confirmPassword} onChange={(event) => update("confirmPassword", event.target.value)} /></Field>
           </div>
           <Button type="submit" className="w-full" loading={submitting} disabled={availability !== "available"}>Account তৈরি করুন</Button>
         </form>
