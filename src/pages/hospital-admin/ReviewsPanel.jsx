@@ -1,0 +1,3 @@
+import GenericCrudPanel from "./GenericCrudPanel.jsx";
+const fields = [{ key: "name", label: "রোগীর নাম", required: true }, { key: "rating", label: "রেটিং (১–৫)", type: "number", required: true }, { key: "comment", label: "মন্তব্য", type: "textarea", required: true, wide: true }, { key: "reply", label: "হাসপাতালের উত্তর", bilingual: true }, { key: "is_published", label: "প্রকাশ করুন", type: "checkbox" }];
+export default function ReviewsPanel() { return <GenericCrudPanel title="রিভিউ" emptyTitle="এখনো কোনো রিভিউ যোগ করা হয়নি" emptyDescription="রোগীর অনুমোদিত feedback প্রকাশ করতে নিচের বাটনে ক্লিক করে প্রথম রিভিউ যোগ করুন।" table="reviews" fields={fields} primaryKey="name" />; }

@@ -1,0 +1,88 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: "#f2f7f5",
+          100: "#e4efec",
+          200: "#c8ddd8",
+          300: "#a0c5bd",
+          400: "#74a69d",
+          500: "#4a615c",
+          600: "#3e524d",
+          700: "#33443f",
+          800: "#1a3936",
+          900: "#082a28",
+        },
+        accent: {
+          50: "#fdf8ee",
+          100: "#f9ecd2",
+          200: "#f2d8a2",
+          300: "#e9be6d",
+          400: "#D9A24B",
+          500: "#c78a2e",
+          600: "#aa6c22",
+          700: "#89501e",
+          800: "#713f20",
+          900: "#60351f",
+          DEFAULT: "#D9A24B",
+        },
+        surface: {
+          DEFAULT: "#ffffff",
+          subtle: "#f2f7f5",
+          muted: "#eef2f0",
+          raised: "#ffffff",
+          inverse: "#082a28",
+        },
+        success: {
+          light: "#e8f6ef",
+          DEFAULT: "#247a52",
+          dark: "#185b3c",
+        },
+        warning: {
+          light: "#fff6df",
+          DEFAULT: "#b7791f",
+          dark: "#805216",
+        },
+        danger: {
+          light: "#fcebea",
+          DEFAULT: "#c0392b",
+          dark: "#8f2b21",
+        },
+      },
+      fontFamily: {
+        sans: ["Hind Siliguri", "Noto Sans Bengali", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Hind Siliguri", "Noto Sans Bengali", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      borderRadius: {
+        sm: "0.5rem",
+        DEFAULT: "0.75rem",
+        lg: "0.875rem",
+        xl: "1rem",
+        "2xl": "1.25rem",
+      },
+      boxShadow: {
+        xs: "0 1px 3px rgba(8, 42, 40, 0.05)",
+        sm: "0 2px 10px rgba(8, 42, 40, 0.06)",
+        card: "0 8px 24px rgba(8, 42, 40, 0.08)",
+        md: "0 10px 28px rgba(8, 42, 40, 0.10)",
+        lg: "0 18px 44px rgba(8, 42, 40, 0.14)",
+        focus: "0 0 0 4px rgba(217, 162, 75, 0.28)",
+      },
+      spacing: {
+        4.5: "1.125rem",
+        5.5: "1.375rem",
+        7.5: "1.875rem",
+        13: "3.25rem",
+        15: "3.75rem",
+        18: "4.5rem",
+        22: "5.5rem",
+        26: "6.5rem",
+        30: "7.5rem",
+      },
+    },
+  },
+  plugins: [],
+};

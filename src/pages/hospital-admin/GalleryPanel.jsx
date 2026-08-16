@@ -1,0 +1,3 @@
+import GenericCrudPanel from "./GenericCrudPanel.jsx";
+const fields = [{ key: "caption", label: "ক্যাপশন", bilingual: true, required: true }, { key: "category_id", label: "ক্যাটাগরি", type: "select", required: true, options: [["hospital","হাসপাতাল"],["doctors","ডাক্তার"],["staff","স্টাফ"],["ot","অপারেশন থিয়েটার"],["success","সাফল্যের গল্প"]] }, { key: "image", label: "ছবি", type: "image", required: true, wide: true }, { key: "is_active", label: "ওয়েবসাইটে দেখান", type: "checkbox" }];
+export default function GalleryPanel() { return <GenericCrudPanel title="গ্যালারি" emptyTitle="গ্যালারিতে এখনো কোনো ছবি নেই" emptyDescription="হাসপাতালের পরিবেশ দেখাতে নিচের বাটনে ক্লিক করে প্রথম ছবি যোগ করুন।" table="gallery_images" fields={fields} primaryKey="caption" />; }

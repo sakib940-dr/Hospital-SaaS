@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f2f7f5"/>
+  <rect x="70" y="70" width="1060" height="490" rx="48" fill="#082a28"/>
+  <rect x="120" y="130" width="92" height="250" rx="20" fill="#D9A24B"/>
+  <rect x="41" y="209" width="250" height="92" rx="20" fill="#D9A24B"/>
+  <text x="350" y="275" font-family="sans-serif" font-size="76" font-weight="700" fill="#fff">Hospital Cloud</text>
+  <text x="350" y="365" font-family="sans-serif" font-size="36" fill="#c8ddd8">Your hospital website, ready in minutes.</text>
+</svg>

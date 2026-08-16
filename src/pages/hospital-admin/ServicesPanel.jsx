@@ -1,0 +1,3 @@
+import GenericCrudPanel from "./GenericCrudPanel.jsx";
+const fields = [{ key: "name", label: "সেবার নাম", bilingual: true, required: true }, { key: "description", label: "বিবরণ", bilingual: true }, { key: "image", label: "ছবি", type: "image", wide: true }, { key: "icon", label: "Icon name" }, { key: "is_active", label: "ওয়েবসাইটে দেখান", type: "checkbox" }];
+export default function ServicesPanel() { return <GenericCrudPanel title="সার্ভিস" description="হাসপাতালের চিকিৎসা ও অন্যান্য সেবা পরিচালনা করুন।" emptyTitle="এখনো কোনো সার্ভিস যোগ করা হয়নি" emptyDescription="রোগীদের দেখানোর জন্য নিচের বাটনে ক্লিক করে প্রথম সার্ভিস যোগ করুন।" table="services" fields={fields} />; }
