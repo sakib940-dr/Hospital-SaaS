@@ -16,3 +16,6 @@ test("root host supports a single path segment as a temporary tenant preview", (
   assert.deepEqual(resolveTenant(location("hospitalcloud.com", "", "/demo-hospital")), { mode: "hospital", lookupType: "subdomain", value: "demo-hospital" });
   assert.equal(resolveTenant(location("hospitalcloud.com", "", "/demo-hospital/about")).mode, "marketing");
 });
+test("Vercel deployment resolves dashboard path links without root-domain configuration", () => {
+  assert.deepEqual(resolveTenant(location("my-hospital-app.vercel.app", "", "/demo-hospital")), { mode: "hospital", lookupType: "subdomain", value: "demo-hospital" });
+});
