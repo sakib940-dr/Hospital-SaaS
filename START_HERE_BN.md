@@ -54,6 +54,8 @@ git push -u origin main
 5. Deploy করুন।
 6. Root domain ও wildcard `*.yourdomain.com` Vercel-এ add করুন।
 
+নিজের domain কেনার আগ পর্যন্ত Vercel URL-তে hospital visitor site test করা যাবে: `https://YOUR-PROJECT.vercel.app/HOSPITAL-SLUG`। এজন্য `VITE_ROOT_DOMAIN=YOUR-PROJECT.vercel.app` দিন এবং redeploy করুন।
+
 ## ৫. প্রথম login
 
 - `/login` খুলুন।

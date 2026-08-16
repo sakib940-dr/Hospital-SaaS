@@ -39,6 +39,7 @@
 - Hospital/platform analytics
 - Onboarding, dynamic SEO, custom domains
 - Self-serve signup: debounced subdomain check, Supabase Auth, tenant RPC, email-confirmation fallback
+- Temporary Vercel tenant preview: root deployment URL-তে `/{hospital-subdomain}` path visitor site দেখায়; own domain যোগ হলে normal wildcard subdomain ব্যবহার করুন
 - Marketing pricing/social-proof sections, trial countdown, polished empty states
 - Multi-tenant RLS and storage policies
 
